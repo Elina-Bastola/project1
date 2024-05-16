@@ -1,13 +1,14 @@
-// window.addEventListener("scroll", (event) => {
-// 	var a=scrollY;
-// 	if(a > 150){
-// 		document.querySelector('.navbar').classList.add('aaa')
-// 	}
-// 	else{
-// 		document.querySelector('.navbar').classList.remove('aaa')
-// 	}
-// 	}
-// });
+window.addEventListener("scroll", (event) => {
+	var a=scrollY;
+	if(a > 150){
+		document.querySelector('header').classList.add('aaa')
+	}
+	else{
+		document.querySelector('header').classList.remove('aaa')
+	}
+	
+}
+);
   AOS.init();
  
 

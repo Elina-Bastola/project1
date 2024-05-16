@@ -1,3 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Laila:wght@300;400;500;600;700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+h1, h2 {
+  font-family: "Laila", serif;
+  font-weight: 700;
+}
+
+a {
+  text-decoration: none;
+  font-family: "Source Serif 4", serif;
+}
+
+ul li {
+  list-style: none;
+  font-family: "Source Serif 4", serif;
+}
+
+h3, h4, h5, h5 {
+  font-family: "Laila", serif;
+  font-weight: 700;
+}
+
+div {
+  font-family: "Source Serif 4", serif;
+}
+
 @media (min-width: 1200px) {
   .container {
     max-width: 1240px;
@@ -12,16 +44,16 @@
   padding: 6px;
 }
 
-.info ul li a {
+.top .info ul li {
   width: 28px;
   height: 30px;
   background-color: #fff;
-  display: block;
   border-radius: 5px;
   font-size: 14px;
   color: #018AFE;
+  line-height: 18px;
 }
-.info ul li a:hover {
+.top .info ul li:hover {
   background-color: black;
   color: #FFF;
 }
@@ -119,6 +151,7 @@ header.sticky-top {
 }
 .banner-body .subtitle h5 {
   font-size: 16px;
+  margin: auto;
 }
 
 .banner-body h1 {
@@ -132,6 +165,10 @@ header.sticky-top {
   width: 50%;
   margin-top: 20px;
   margin-bottom: 30px;
+}
+
+.banner .btn h5 {
+  margin: auto;
 }
 
 .services .box-icon {
@@ -225,22 +262,20 @@ header.sticky-top {
   content: "";
   overflow: hidden;
 }
+
 .our-services .step-img .icon-services {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  text-align: center !important;
+  margin: auto;
+  top: -50px;
+  position: relative;
   width: 100px;
   height: 100px;
   background-color: #018AFE !important;
   border-radius: 50%;
-  margin-bottom: 20px;
+}
+.our-services .step-img .icon-services img {
+  text-align: center;
+  line-height: 20px;
+  margin-top: 20px;
 }
 
 .get-consultant {
@@ -437,7 +472,12 @@ header.sticky-top {
 
 .testimonials .testimonials-slides {
   position: relative;
-  width: 260px;
+  width: 290px;
+  height: 350px;
+}
+.testimonials .swiper-pagination-bullet {
+  width: 15px;
+  height: 15px;
 }
 
 .blog-news .section-subtitle {
@@ -515,8 +555,12 @@ header.sticky-top {
 }
 
 .newpaperletter-form .form-control {
-  border: 0px;
+  border: none;
   border-radius: 0px;
+}
+.newpaperletter-form .form-control input[type=email] {
+  outline: none;
+  border: none;
 }
 
 .btn-default {
@@ -587,6 +631,11 @@ header.sticky-top {
   font-weight: bold;
   text-align: center;
   font-size: 18px;
+}
+.footer-navigation .hr-line {
+  border: 1px solid #ccc;
+  width: 100%;
+  margin-bottom: 60px;
 }
 
 .site-navigation {
@@ -705,4 +754,55 @@ header.sticky-top {
     -webkit-transform: translateY(0%);
             transform: translateY(0%);
   }
+}
+@media (max-width: 800px) {
+  .footer-logo {
+    margin-top: 40px;
+  }
+  .footer-logo .site-footer-logo {
+    text-align: start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+  .footer-navigation .mobile {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+  .footer-navigation li {
+    padding: 15px;
+  }
+  .site-navigation .nav-part {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .site-navigation .copyrights {
+    padding-top: 30px;
+    margin-top: 20px;
+    text-align: center;
+  }
+}
+@media (max-width: 800px) {
+  .main-footer .newpaperletter-form {
+    display: none;
+  }
+  .our-services {
+    padding-top: 40px;
+    display: none;
+  }
+  .services .info-box {
+    padding: 10px;
+    margin-top: 30px;
+  }
+}
+body {
+  overflow-x: hidden;
 }/*# sourceMappingURL=style.css.map */
